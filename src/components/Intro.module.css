@@ -4,13 +4,6 @@
   object-fit: cover;
 }
 
-@media (max-width: 900px) {
-  .background {
-    height: 100vh;
-    position: relative;
-  }
-}
-
 .layer {
   position: absolute;
   height: 100vh;
@@ -29,23 +22,13 @@
   transform: translate(-50%, -50%);
 }
 
-.container > div {
-  z-index: 3;
-}
-
 .container h1 {
   color: rgb(212, 208, 208);
   font-size: 78px;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 0;
-}
-
-@media (max-width: 900px) {
-  .container h1 {
-    font-size: 48px;
-    width: 100vw;
-    padding-top: 18px;
-  }
+  -webkit-text-shadow: 2px 2px #000000;
+   text-shadow: 2px 2px #000000;
 }
 
 .container p {
@@ -53,18 +36,37 @@
   font-size: 54px;
   margin-top: 0;
   margin-bottom: 20px;
-}
-
-@media (max-width: 900px) {
-  .container p {
-    padding-top: 8px;
-    font-size: 38px;
-  }
+  -webkit-text-shadow: 2px 2px #000000;
+  text-shadow: 2px 2px #000000;
 }
 
 .profile-pic {
   border-radius: 50%;
-  width: 240px;
-  height: 216px;
-  border:   rgb(212, 208, 208) 4px solid;
+  width: 280px;
+  height: 256px;
+  border:rgb(212, 208, 208) 4px solid;
+  -webkit-box-shadow: 5px 5px 15px 5px #000000;
+  box-shadow: 5px 5px 15px 5px #000000;
+}
+
+@media (max-width: 900px) {
+  .background {
+    height: 100vh;
+    position: relative;
+  }
+
+  .layer {
+    height: 100vh;
+  }
+
+  .container h1 {
+    font-size: 48px;
+    width: 100vw;
+    padding-top: 18px;
+  }
+
+  .container p {
+    padding-top: 8px;
+    font-size: 38px;
+  }
 }
