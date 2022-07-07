@@ -1,7 +1,20 @@
 .navbar {
 	height: 80px;
 	width: 100vw;
-	background: rgb(17, 17, 17);
+	background: black;
+	opacity: 90%;
+	font-size: 1.1rem;
+	position: fixed;
+	z-index: 3;
+	align-items: center;
+	display: flex;
+	justify-content: space-around;
+}
+
+.navbar-active {
+	height: 80px;
+	width: 100vw;
+	background: rgb(2, 2, 2);
 	opacity: 94%;
 	font-size: 1.2rem;
 	position: fixed;
@@ -17,7 +30,12 @@
 
 .nav-logo {
 	text-decoration: none;
-  color: rgb(212, 208, 208);
+	/* width: 10px */
+  /* color: rgb(212, 208, 208); */
+}
+
+.nav-logo img {
+	width: 70px;
 }
 
 .nav-links {
@@ -26,14 +44,9 @@
 	list-style-type: none;
 }
 
-.nav-links.active {
-	display: none;
-}
-
 .nav-link {
   color: rgb(212, 208, 208);
 	text-decoration: none;
-	transition: 0.3s all;
 }
 
 .nav-link:hover {
@@ -52,34 +65,35 @@
 
 @media only screen and (max-width: 900px) {
 	.navbar {
-		transition: transform 0.3s ease-out;
-		height: auto;
-		display: flex;
 		flex-wrap: wrap;
-		padding: 16px 0;
+		height: auto;
+	}
+
+	.navbar-active {
+		height: auto;
 	}
 
 	.navbar ul {
 		padding: 0 10px 0 0;
-		z-index: 3;
 		width: 100vw;
-		display: block;
+	}
+
+	.nav-logo img {
+		width: 50px;
 	}
 
 	.nav-links {
-		display: flex;
-		flex-direction: column;
-		position: absolute;
-		text-align: center;
-		width: 100%;
-		top: 80px;
-		left: -100%;
-		height: 80px;
-		width: 100vw;
+		display: none;
+		/* transform: translate(9999px);
+		opacity: 0; */
 	}
 
-	.nav-links.active {
-		left: 0;
+	.nav-links-active {
+		display: block!important;
+		/* flex: wrap;
+		transition: opacity 2s linear;
+		transform: translate(0);
+		opacity: 1; */
 	}
 
 	.nav-item {

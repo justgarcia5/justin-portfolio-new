@@ -1,0 +1,16 @@
+.card {
+  padding: 1rem;
+  -webkit-box-shadow: 5px 5px 15px 5px #505050;
+  box-shadow: 5px 5px 15px 5px #505050;
+  border-radius: 14px;
+  background-color: white;
+  width: 400px;
+  margin: 40px;
+}
+
+@media (max-width: 900px) {
+  .card {
+    width: 280px;
+    margin: 30px auto;
+  }
+}

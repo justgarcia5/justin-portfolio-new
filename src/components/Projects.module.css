@@ -1,0 +1,44 @@
+.projects-section {
+  position: relative;
+  top: -100px;
+  background: linear-gradient(180deg, rgb(14, 15, 17), white);
+
+}
+
+.title {
+  padding: 100px 0 0 0;
+  font-size: 50px;
+  color: white;
+}
+
+.project-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 60px 40px;
+}
+
+.project-cards img {
+  width: 400px;
+  height: 240px;
+}
+
+Button {
+  margin: 30px auto 20px auto;
+}
+
+@media (max-width: 900px) {
+  .project-cards {
+    flex-direction: column;
+  }
+
+  .project-cards img {
+    width: 280px;
+    height: 180px;
+  }
+
+  .title {
+    margin-top: 80px;
+    margin-bottom: 0;
+  }
+}
