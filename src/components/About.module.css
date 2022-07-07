@@ -1,11 +1,11 @@
 .about-wrapper-row {
   display: flex;
-  /* gap: 10px 20px; */
   top: -10px;
   position: relative;
   margin: auto;
   padding: 100px 100px 40px 100px;
-  background-color: rgb(14, 15, 17)
+  background-color: rgb(14, 15, 17);
+  justify-content: space-evenly;
 }
 
 .about-column {
@@ -24,6 +24,7 @@
 
 iframe {
   width: 98%;
+  max-width: 400px;
   -webkit-box-shadow: 5px 5px 15px 5px #000000;
   box-shadow: 5px 5px 15px 5px #000000;
 }
