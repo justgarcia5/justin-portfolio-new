@@ -1,0 +1,71 @@
+.icon-bar {
+  z-index: 5;
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  border: 2px solid rgba(0, 0, 0, 0);
+  border-radius: 50%;
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 26px;
+  margin: 10px 4px;
+}
+
+.icon-bar a:hover {
+  background-color: rgb(207, 205, 205);
+  text-align: none;
+  color: black;
+}
+
+.icons a {
+  text-decoration: none;
+  color: white;
+}
+
+.icons a:hover {
+  color: rgb(172, 171, 171);
+}
+
+.facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.codepen {
+  background: #131417;
+  color: white;
+}
+
+.github {
+  background: #AD5C51;
+  color: white;
+}
+
+.linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.envelope {
+  background: #706e6e;
+  color: rgb(247, 244, 244);
+}
+
+svg {
+  padding-top: 6px;
+
+}
+
+@media only screen and (max-width: 900px) {
+  .icon-bar {
+    display: none;
+  }
+}

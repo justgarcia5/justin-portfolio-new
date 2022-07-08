@@ -7,6 +7,7 @@ import About from './components/About';
 import classes from './App.module.css';
 import Projects from './components/Projects';
 import Project from './components/Layout/Project';
+import StickyBar from './components/Layout/StickyBar';
 
 function App() {
   const [isModalActive, setIsModalAcitve] = useState(false);
@@ -25,6 +26,7 @@ function App() {
     <div className={classes.App}>
       {isModalActive && <Project onCloseProject={closeProjectHandler} projectID={projectID} />}
       <Nav />
+      <StickyBar />
       <Intro />
       <About />
       <Projects onShowProject={showProjectHandler} />
