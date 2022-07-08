@@ -37,6 +37,10 @@ Button {
     height: 180px;
   }
 
+  .projects-section {
+    top: -160px;
+  }
+
   .title {
     margin-top: 80px;
     margin-bottom: 0;
