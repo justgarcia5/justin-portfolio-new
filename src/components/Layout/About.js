@@ -17,7 +17,7 @@ function About(props) {
       <div id="about" className={classes["about-wrapper-row"]}>
         <div className={classes["about-column"]}>
           <h2 className={classes["about-title"]}>About</h2>
-          <p className={classes["about-text-container"]}>I am a web developer with two years experience building and creating responsive and high quality applications using React and Ruby on Rails. I have obtained a solid foundation and understanding of web development while attending and completing a Full-Stack bootcamp. Thereafter the bootcamp, I was an intern for a consultant company, Coding Zeal. During this time I gained experience and knowledge in working in an Agile Software Development process.</p>
+          <p className={classes["about-text-container"]}>I am a web developer with two years experience building and creating responsive and high quality applications using React and Ruby on Rails. I have obtained a solid foundation and understanding of web development while attending and completing a Full-Stack bootcamp. Thereafter the bootcamp, I was an intern software developer for a consultant company, Coding Zeal. During this time I gained experience and knowledge in working in an Agile Software Development process. I know am freelance web developer with hands on experience which includes building and updating web apps.</p>
         </div>
         <div className={classes["about-column"]}>
           <h2 className={classes["about-title"]}>Skills</h2>
@@ -25,11 +25,14 @@ function About(props) {
           <p>React</p>
           <p>Ruby on Rails</p>
           <p>Bootstrap</p>
-          <p>HTML/CSS</p>
+          <p>HTML</p>
+          <p>CSS</p>
           <p>Postgresql</p>
           <p>AWS</p>
           <p>Heroku</p>
           <p>Docker</p>
+          <p>jQuery</p>
+          <p>Java</p>
         </div>
         <div className={classes["about-column"]}>
           <iframe title='aab' src="https://open.spotify.com/embed/album/0RkRavz2FtCFuFe3U9iEZE" width="340" height="440" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
