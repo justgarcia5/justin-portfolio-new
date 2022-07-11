@@ -20,7 +20,7 @@ const projects = [
   {
     id: 'm2',
     title: 'Initiative Tracker',
-    description: 'Initiative Tracker was an application that I got the opportunity to be part of during my 2 month internship with CodingZeal. This application was built to help users set and accomplish initiatives. During this time, I was introduced to Agile Methodology where I participated in IPMs with clients, constructed wireflow diagrams, and built out features and testing that feature before delivery. ',
+    description: 'Initiative Tracker was an application that I got the opportunity to be part of during my 2 month internship with CodingZeal. This application was built to help users set and accomplish initiatives. During this time, I was introduced to Agile Methodology where I participated in IPMs with clients, constructed wireflow diagrams, and building out features while implementing TDD before delivery of that feature.',
     technologies: 'Ruby on Rails, RSpec, Devise, Bootstrap, Webpack, Postgresql',
     code: 'https://github.com/CodingZeal/initiative-tracker'
   },
