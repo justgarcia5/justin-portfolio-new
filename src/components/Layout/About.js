@@ -17,7 +17,7 @@ function About(props) {
       <div id="about" className={classes["about-wrapper-row"]}>
         <div className={classes["about-column"]}>
           <h2 className={classes["about-title"]}>About</h2>
-          <p className={classes["about-text-container"]}>I am a web developer with two years experience building and creating responsive and high quality applications using React and Ruby on Rails. I have obtained a solid foundation and understanding of web development while attending and completing a Full-Stack bootcamp. Thereafter the bootcamp, I was an intern software developer for a consultant company, Coding Zeal. During this time I gained experience and knowledge in working in an Agile Software Development process. I know am freelance web developer with hands on experience which includes building and updating web apps.</p>
+          <p className={classes["about-text-container"]}>I am a web developer with two years experience building and creating responsive and high quality applications using React and Ruby on Rails. I have obtained a solid foundation and understanding of web development while attending and completing a Full-Stack bootcamp. Thereafter the bootcamp, I was an intern software developer for a consultant company, Coding Zeal. During this time I gained experience and knowledge in working in an Agile Software Development process. I know am freelance web developer with hands on experience with building and updating web apps.</p>
         </div>
         <div className={classes["about-column"]}>
           <h2 className={classes["about-title"]}>Skills</h2>
