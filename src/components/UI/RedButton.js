@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import classes from './Button.module.css';
+import classes from './RedButton.module.css';
 
 const Button = props => {
   const [buttonIsHighlighted, setButtonIsHighlighted] = useState(false);
@@ -19,7 +19,7 @@ const Button = props => {
     };
   }
 
-  return <button onMouseEnter={onHover} onClick={props.onClick} className={buttonClasses}>See more</button>
+  return <button className={buttonClasses} onMouseEnter={onHover} onClick={props.onClick}>{props.children}</button>
 }
 
 export default Button;

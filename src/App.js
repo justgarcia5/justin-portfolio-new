@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
 import Nav from './components/Layout/Nav';
-import Intro from './components/Intro';
-import About from './components/About';
+import Intro from './components/Layout/Intro';
+import About from './components/Layout/About';
 
 import classes from './App.module.css';
-import Projects from './components/Projects';
+import Projects from './components/Layout/Projects';
 import Project from './components/Layout/Project';
 import StickyBar from './components/Layout/StickyBar';
 
@@ -27,7 +27,7 @@ function App() {
       {isModalActive && <Project onCloseProject={closeProjectHandler} projectID={projectID} />}
       <Nav />
       <StickyBar />
-      <Intro />
+      <Intro  />
       <About />
       <Projects onShowProject={showProjectHandler} />
     </div>

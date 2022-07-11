@@ -23,26 +23,19 @@
   height: 240px;
 }
 
-Button {
-  margin: 30px auto 20px auto;
+.modal-button-div  {
+  margin: 30px;
+  display: flex;
+  justify-content: center;
 }
 
-@media (max-width: 900px) {
-  .project-cards {
-    flex-direction: column;
-  }
+.modal-button-div button {
+  padding: 0.75rem 3rem;
+}
 
+@media only screen and (max-width: 900px) {
   .project-cards img {
     width: 280px;
-    height: 180px;
-  }
-
-  .projects-section {
-    top: -160px;
-  }
-
-  .title {
-    margin-top: 80px;
-    margin-bottom: 0;
+    height: auto;
   }
 }

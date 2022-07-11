@@ -11,7 +11,6 @@ const Nav = props => {
 
 	const handleClick = () =>  {
 		setOpen(!open)
-
 	};
 
 	const closeMenu = () => setOpen(false);
@@ -32,20 +31,20 @@ const Nav = props => {
 							Home
 						</Link>
 					</li>
-					<li className={classes['nav-item']}>
-						<Link to="/about" className={classes['nav-link']} onClick={closeMenu}>
+						<li className={classes['nav-item']} >
+						<Link to="about" className={classes['nav-link']} onClick={closeMenu} >
 							About
 						</Link>
 					</li>
 					<li className={classes['nav-item']}>
-						<Link to="/shop" className={classes['nav-link']} onClick={closeMenu}>
+						<Link to="projects" className={classes['nav-link']} onClick={closeMenu}>
 							Projects
 						</Link>
 					</li>
 					<li className={classes['nav-item']}>
-						<Link to="/shop" className={classes['nav-link']} onClick={closeMenu}>
+						<a href="https://github.com/justgarcia5" className={classes['nav-link']} onClick={closeMenu} target="_blank" rel="noreferrer">
 							GitHub
-						</Link>
+						</a>
 					</li>
 					<li className={classes['nav-item']}>
 						<Link to="/contact" className={classes['nav-link']} onClick={closeMenu}>

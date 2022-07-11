@@ -1,0 +1,34 @@
+.button-div a {
+  text-decoration: none;
+  color: white!important;
+  padding: 0.65rem 3rem;
+  width: auto;
+}
+
+.modal {
+  /* text-align: center; */
+}
+
+.button-div {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-around;
+}
+
+@media only screen and (max-width: 900px) {
+  .button-div {
+    display: block;
+  }
+
+  .button-div a {
+    text-decoration: none;
+    color: white!important;
+    /* padding: 0.65rem 2rem; */
+    width: auto;
+
+  }
+
+  .button-div button {
+    margin: 10px auto;
+  }
+}
