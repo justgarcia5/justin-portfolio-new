@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 
 import classes from './Project.module.css';
 
-import Modal from '../UI/Modal';
-import RedButton from '../UI/RedButton';
-import GreenButton from '../UI/GreenButton';
-import OrangeButton from '../UI/OrangeButton';
+import Modal from '../../UI/Modal';
+import RedButton from '../../UI/RedButton';
+import GreenButton from '../../UI/GreenButton';
+import OrangeButton from '../../UI/OrangeButton';
 
 const projects = [
   {

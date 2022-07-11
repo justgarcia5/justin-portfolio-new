@@ -1,15 +1,15 @@
 import React from 'react';
 
 import classes from './Projects.module.css';
-import Card from '../UI/Card';
-import GreenButton from '../UI/GreenButton'
+import Card from '../../UI/Card';
+import GreenButton from '../../UI/GreenButton'
 
-import Meditation from '../../images/projects/meditation.png';
-import Zeal from '../../images/projects/zeal.png';
-import Responsive from '../../images/projects/responsive.png';
-import TradeUp from '../../images/projects/tradeup.png';
-import TicTacToe from '../../images/projects/tictactoe.png';
-import ColorBox from '../../images/projects/colorbox.png';
+import Meditation from '../../../images/projects/meditation.png';
+import Zeal from '../../../images/projects/zeal.png';
+import Responsive from '../../../images/projects/responsive.png';
+import TradeUp from '../../../images/projects/tradeup.png';
+import TicTacToe from '../../../images/projects/tictactoe.png';
+import ColorBox from '../../../images/projects/colorbox.png';
 
 const projects = [
   {

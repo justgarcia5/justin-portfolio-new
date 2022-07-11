@@ -3,7 +3,7 @@ import { FiMenu, FiX } from 'react-icons/fi';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 import classes from './Nav.module.css';
-import logo from '../../images/logo.png';
+import logo from '../../../images/logo.png';
 
 
 const Nav = props => {

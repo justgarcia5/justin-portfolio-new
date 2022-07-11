@@ -34,6 +34,10 @@
 }
 
 @media only screen and (max-width: 900px) {
+  .projects-section {
+    top: -180px;
+  }
+
   .project-cards img {
     width: 280px;
     height: auto;

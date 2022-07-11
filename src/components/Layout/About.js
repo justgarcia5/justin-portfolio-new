@@ -3,7 +3,12 @@ import React from "react";
 import classes from './About.module.css';
 
 import Aws from '../../images/aws.png';
-import ReactLogo from '../../images/react.png';
+import ReactLogo from '../../images/reactlogo.png';
+import RailsLogo from '../../images/rails.png';
+import GithubLogo from '../../images/github.png';
+import JSLogo from '../../images/js.png';
+import htmlCssLogo from '../../images/html-css.png';
+import JqueryLogo from '../../images/jquery.png';
 
 function About(props) {
 
@@ -27,12 +32,21 @@ function About(props) {
           <p>Docker</p>
         </div>
         <div className={classes["about-column"]}>
-          <iframe title='aab' src="https://open.spotify.com/embed/album/0RkRavz2FtCFuFe3U9iEZE" width="340" height="480" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+          <iframe title='aab' src="https://open.spotify.com/embed/album/0RkRavz2FtCFuFe3U9iEZE" width="340" height="440" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
         </div>
       </div>
-      <div className={classes["logo-section"]}>
+      <div className={classes["logo-section-row1"]}>
         <img src={Aws} alt=''/>
         <img src={ReactLogo} alt=''/>
+      </div>
+      <div className={classes["logo-section-row2"]}>
+        <img src={RailsLogo} alt=''/>
+        <img src={GithubLogo} alt=''/>
+        <img src={JSLogo} alt=''/>
+      </div>
+      <div className={classes["logo-section-row3"]}>
+        <img src={htmlCssLogo} alt=''/>
+        <img src={JqueryLogo} alt=''/>
       </div>
     </React.Fragment>
   );
