@@ -37,7 +37,7 @@ iframe {
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
-  padding: 60px 0 50px 0;
+  padding: 60px 0 40px 0;
 }
 
 .logo-section-row2 {
@@ -48,7 +48,7 @@ iframe {
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
-  padding: 60px 0 50px 0;
+  padding: 40px 0 40px 0;
 }
 
 .logo-section-row3 {
@@ -59,20 +59,33 @@ iframe {
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
-  padding: 60px 0 50px 0;
+  padding: 40px 0 50px 0;
+}
+
+.logo-section-row1 img:last-child {
+  width: 210px;
 }
 
 .logo-section-row1 img {
-  width: 200px;
+  width: 180px;
 }
 
 .logo-section-row2 img {
-  width: 200px;
+  width: 180px;
+}
+
+.logo-section-row2 img:first-child {
+  width: 260px;
+}
+
+.logo-section-row3 img:first-child {
+  width: 240px;
 }
 
 .logo-section-row3 img {
-  width: 200px;
+  width: 180px;
 }
+
 
 @media (max-width: 900px) {
   .about-wrapper-row {
