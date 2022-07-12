@@ -45,9 +45,17 @@ textarea:focus {
 .input button {
   margin: 20px auto;
 }
+
 .input a {
   text-decoration: none;
   color: white!important;
   padding: 0.65rem 3rem;
   width: auto;
+}
+
+@media only screen and (max-width: 900px) {
+  .input {
+    width: 300px;
+    margin: 50px auto;
+  }
 }
