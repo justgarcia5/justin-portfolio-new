@@ -10,8 +10,15 @@ import Responsive from '../../../images/projects/responsive.png';
 import TradeUp from '../../../images/projects/tradeup.png';
 import TicTacToe from '../../../images/projects/tictactoe.png';
 import ColorBox from '../../../images/projects/colorbox.png';
+import Portfolio from '../../../images/projects/portfolio.png';
 
 const projects = [
+  {
+    id: 'm7',
+    title: 'My Portfolio',
+    image: Portfolio
+  },
+
   {
     id: 'm1',
     title: 'Meditation App',
@@ -46,7 +53,7 @@ const projects = [
     id: 'm6',
     title: 'Color Box',
     image: ColorBox
-  }
+  },
 ];
 
 const Projects = props => {

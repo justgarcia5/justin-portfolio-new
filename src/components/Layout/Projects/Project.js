@@ -58,6 +58,14 @@ const projects = [
     technologies: 'React, React Hooks',
     code: 'https://codesandbox.io/s/color-box-bu5xw',
     live: 'https://bu5xw.csb.app/'
+  },
+
+  {
+    id: 'm7',
+    title: 'MY Portfolio',
+    description: 'Check out whats under the hood of my protfolio website. This is a react app where I utilized react hooks and passing props. I also built a custom menu using pure CSS that is responsive in both desktop on mobile views.',
+    technologies: 'React, React Hooks',
+    code: 'https://github.com/justgarcia5/justin-portfolio-new',
   }
 ];
 
