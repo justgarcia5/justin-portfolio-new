@@ -7,7 +7,7 @@ import ContactCol from './ContactCol';
 
 const Contact = () => {
   return (
-    <div className={classes['contact-section']}>
+    <div id='contact' className={classes['contact-section']}>
       <h1>Lets chat. Give me a shout!</h1>
       <div className={classes['contact-row']}>
         <ContactCol />

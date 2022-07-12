@@ -1,9 +1,12 @@
 form {
   border: rgb(240, 225, 206) 1px solid;
-  padding: 30px;
+  padding: 100px 30px;
   background-color: rgb(240, 225, 206);
   -webkit-box-shadow: 5px 5px 15px 5px #505050;
   box-shadow: 5px 5px 15px 5px #505050;
+  border-radius: 8px;
+  height: auto;
+  max-height: 460px;
 }
 
 .input {
@@ -18,11 +21,13 @@ input[type=text] {
   margin: 10px 0;
   box-sizing: border-box;
   border-radius: 8px;
-  border: 1px solid black;
+  border: none;
+  background-color: rgb(255, 252, 239);
 }
 
 input:focus {
-  border: blue 1px solid;
+  outline: none;
+  background-color: white;
 }
 
 textarea {
@@ -31,15 +36,17 @@ textarea {
   margin: 10px 0;
   padding: 12px 20px;
   box-sizing: border-box;
-  border: 1px solid black;
+  border: none;
   border-radius: 4px;
   background-color: #f8f8f8;
   resize: none;
   border-radius: 12px;
+  outline: none;
+  background-color: rgb(255, 252, 239);
 }
 
 textarea:focus {
-  border: blue 1px solid;
+  background-color: white;
 }
 
 .input button {

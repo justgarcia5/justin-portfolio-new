@@ -9,6 +9,15 @@ import logo from '../../../images/logo.png';
 const Nav = props => {
   const [open, setOpen] = useState(false);
 
+	const scroll = (id) => {
+		const section = document.querySelector(id);
+		section.scrollIntoView( { behavior: 'smooth', block: 'start' } );
+
+		setTimeout(() => {
+			closeMenu();
+		}, 200);
+	};
+
 	const handleClick = () =>  {
 		setOpen(!open)
 	};
@@ -19,7 +28,7 @@ const Nav = props => {
     <Router>
       {/* <nav className={open ? classes['navbar-active'] : classes.navbar}> */}
       <nav className={classes.navbar}>
-				<Link to="/" className={classes['nav-logo']}>
+				<Link to="" className={classes['nav-logo']} onClick={() => scroll('#intro')}>
 					<img src={logo} alt=''/>
 				</Link>
 				<div onClick={handleClick} className={classes['nav-icon']}>
@@ -27,29 +36,29 @@ const Nav = props => {
 				</div>
 				<ul className={open ? classes['nav-links-active'] : classes['nav-links']}>
 					<li className={classes['nav-logo']}>
-						<Link to="/" className={classes['nav-link']} onClick={closeMenu}>
+						<Link to="" className={classes['nav-link']} onClick={() => scroll('#intro')}>
 							Home
 						</Link>
 					</li>
 						<li className={classes['nav-item']} >
-						<Link to="about" className={classes['nav-link']} onClick={closeMenu} >
+						<Link to="" className={classes['nav-link']} onClick={() => scroll('#about')} >
 							About
 						</Link>
 					</li>
 					<li className={classes['nav-item']}>
-						<Link to="projects" className={classes['nav-link']} onClick={closeMenu}>
+						<Link to="" className={classes['nav-link']} onClick={() => scroll('#projects')}>
 							Projects
+						</Link>
+					</li>
+					<li className={classes['nav-item']}>
+						<Link to="" className={classes['nav-link']} onClick={() => scroll('#contact')}>
+							Contact
 						</Link>
 					</li>
 					<li className={classes['nav-item']}>
 						<a href="https://github.com/justgarcia5" className={classes['nav-link']} onClick={closeMenu} target="_blank" rel="noreferrer">
 							GitHub
 						</a>
-					</li>
-					<li className={classes['nav-item']}>
-						<Link to="/contact" className={classes['nav-link']} onClick={closeMenu}>
-							Contact
-						</Link>
 					</li>
 				</ul>
 			</nav>

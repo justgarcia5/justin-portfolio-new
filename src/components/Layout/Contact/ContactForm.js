@@ -15,7 +15,7 @@ const ContactForm = () => {
             <label >Message </label>
             <textarea type="text"/>
             <GreenButton>
-                <a href='/'>Submit</a>
+                <a href='/'>Send</a>
             </GreenButton>
         </form>
     )
