@@ -1,5 +1,5 @@
 form {
-  border: black 1px dotted;
+  border: rgb(240, 225, 206) 1px solid;
   padding: 30px;
   background-color: rgb(240, 225, 206);
   -webkit-box-shadow: 5px 5px 15px 5px #505050;
