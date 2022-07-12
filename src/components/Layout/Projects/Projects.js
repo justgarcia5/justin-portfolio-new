@@ -11,6 +11,7 @@ import TradeUp from '../../../images/projects/tradeup.png';
 import TicTacToe from '../../../images/projects/tictactoe.png';
 import ColorBox from '../../../images/projects/colorbox.png';
 import Portfolio from '../../../images/projects/portfolio.png';
+import TechTalk from '../../../images/projects/techtalk.png';
 
 const projects = [
   {
@@ -53,6 +54,12 @@ const projects = [
     id: 'm6',
     title: 'Color Box',
     image: ColorBox
+  },
+
+  {
+    id: 'm8',
+    title: 'Tech Talk React Lifecycle Methods',
+    image: TechTalk
   },
 ];
 

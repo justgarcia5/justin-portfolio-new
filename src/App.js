@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import Nav from './components/Layout/Navigation/Nav';
 import Intro from './components/Layout/Intro';
 import About from './components/Layout/About';
+import Contact from './components/Layout/Contact/Contact';
+import Footer from './components/Layout/Footer';
 
 import classes from './App.module.css';
 import Projects from './components/Layout/Projects/Projects';
@@ -30,6 +32,8 @@ function App() {
       <Intro  />
       <About />
       <Projects onShowProject={showProjectHandler} />
+      <Contact />
+      <Footer />
     </div>
   );
 }

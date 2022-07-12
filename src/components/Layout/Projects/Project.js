@@ -66,7 +66,15 @@ const projects = [
     description: 'Check out whats under the hood of my protfolio website. This is a react app where I utilized react hooks and passing props. I also built a custom menu using pure CSS that is responsive in both desktop on mobile views.',
     technologies: 'React, React Hooks',
     code: 'https://github.com/justgarcia5/justin-portfolio-new',
-  }
+  },
+
+  {
+    id: 'm8',
+    title: 'Tech Talk React Lifecycle Methods',
+    description: 'During the course of the three month bootcamp I attended, I was given the task of finding and giving a tech talk on any relevant technologies that interested me and present it to my cohort. I chose to do my presentation on React Life Cycle Methods. Check it out!',
+    technologies: 'React',
+    live: 'https://docs.google.com/presentation/d/1nVaZyaeBd_OA_bQQ9ULTK5ndD2DlmumNYvp1YcXAgtk/edit#slide=id.p',
+  },
 ];
 
 const Project = props => {
