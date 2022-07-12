@@ -1,9 +1,14 @@
 .contact-col img {
-  width: 340px;
+  /* width: 340px; */
+  height: 760px;
 }
 
 @media only screen and (max-width: 900px) {
+  .contact-col {
+    height: 460px;
+  }
   .contact-col img {
     width: 200px;
+    height: 430px;
   }
 }
