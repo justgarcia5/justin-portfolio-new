@@ -26,8 +26,8 @@ const Nav = props => {
 
   return (
     <Router>
-      {/* <nav className={open ? classes['navbar-active'] : classes.navbar}> */}
-      <nav className={classes.navbar}>
+      <nav className={open ? classes['navbar-active'] : classes.navbar}>
+      {/* <nav className={classes.navbar}> */}
 				<Link to="" className={classes['nav-logo']} onClick={() => scroll('#intro')}>
 					<img src={logo} alt=''/>
 				</Link>

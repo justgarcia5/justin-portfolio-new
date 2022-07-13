@@ -20,7 +20,7 @@ const Footer = () => {
             <a href="mailto:justgarcia5@gmail.com" className='icon-foot p-2' target="_blank" rel="noreferrer"><FaEnvelope /></a>
           </div>
           <br/>
-          <p><a href="mailto:justgarcia5@gmail.com">Justin Garcia</a> © 2022 | San Diego, Ca</p>
+          <p><a href="mailto:justgarcia5@gmail.com">JayGar</a>© 2022 | San Diego, Ca</p>
         </footer>
     </React.Fragment>
   )
