@@ -38,7 +38,7 @@ const projects = [
     id: 'm4',
     title: 'Trade Up',
     description: 'TradeUp is sort of a spin off of OfferUp, but only TradeUp! I built this to keep developing my skills in React and Ruby on Rails. While building this app, I followed common practices such as creating a Heroku pipeline, creating wireflow diagrams, and using Github to test and deploy branches before pushing to the master.',
-    technologies: 'React, Rails, Devise, Bootstrap, Webpack, Postgresql, Google Maps API, Geocoder AWS',
+    technologies: 'React, Rails, Devise, Bootstrap, Webpack, Postgresql, Google Maps API, Geocoder, AWS',
     code: 'https://github.com/justgarcia5/trade-up',
   },
 

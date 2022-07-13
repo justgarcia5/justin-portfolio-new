@@ -1,12 +1,26 @@
 form {
   border: rgb(240, 225, 206) 1px solid;
-  padding: 100px 30px;
+  padding: 70px 30px;
   background-color: rgb(240, 225, 206);
   -webkit-box-shadow: 5px 5px 15px 5px #505050;
   box-shadow: 5px 5px 15px 5px #505050;
   border-radius: 8px;
   height: auto;
-  max-height: 460px;
+  max-height: 440px;
+}
+
+form h2 {
+  text-align: center;
+  margin-top: 0;;
+  margin-bottom: 30px;
+}
+
+form p {
+  text-align: center;
+}
+
+form button {
+  padding: 10px 30px;
 }
 
 .input {
