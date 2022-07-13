@@ -35,7 +35,7 @@ function About(props) {
           <p>Java</p>
         </div>
         <div className={classes["about-column"]}>
-          <iframe title='aab' src="https://open.spotify.com/embed/album/0RkRavz2FtCFuFe3U9iEZE" width="340" height="440" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+          <iframe title='aab' src="https://open.spotify.com/embed/album/0RkRavz2FtCFuFe3U9iEZE" width="340" height="500" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
         </div>
       </div>
       <div className={classes["logo-section-row1"]}>
