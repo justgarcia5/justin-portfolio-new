@@ -15,9 +15,9 @@ const ContactForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
+
     let emailValid = toSend.replyTo.match(/^\S+@\S+\.\S+$/);
 
-    console.log(emailValid);
     if(toSend.fromName.trim().length === 0 || toSend.replyTo.length === 0 || toSend.message.length === 0) {
       setFormHasError({
           title: 'Invalid Input',

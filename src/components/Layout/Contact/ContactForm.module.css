@@ -76,7 +76,7 @@ textarea:focus {
 
 .alert {
   text-align: left;
-  color: red;
+  color: rgb(161, 27, 27);
 }
 
 @media only screen and (max-width: 900px) {
