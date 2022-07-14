@@ -71,7 +71,7 @@ const ContactForm = () => {
       <input
         type='text'
         name='fromName'
-        placeholder='from name'
+        placeholder='Your name'
         value={toSend.fromName}
         onChange={handleChange}
       />
