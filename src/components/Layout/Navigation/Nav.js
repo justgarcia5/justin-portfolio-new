@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 import classes from './Nav.module.css';
 import logo from '../../../images/logo.png';
+import resume from '../../../files/resume.pdf'
 
 
 const Nav = props => {
@@ -36,11 +37,14 @@ const Nav = props => {
 				</div>
 				<ul className={open ? classes['nav-links-active'] : classes['nav-links']}>
 					<li className={classes['nav-logo']}>
-						<Link to="" className={classes['nav-link']} onClick={() => scroll('#intro')}>
+						{/* <Link to="" className={classes['nav-link']} onClick={() => scroll('#intro')}>
 							Home
+						</Link> */}
+						<Link to={resume} className={classes['nav-link']} target="_blank" download>
+							Resume
 						</Link>
 					</li>
-						<li className={classes['nav-item']} >
+					<li className={classes['nav-item']} >
 						<Link to="" className={classes['nav-link']} onClick={() => scroll('#about')} >
 							About
 						</Link>
