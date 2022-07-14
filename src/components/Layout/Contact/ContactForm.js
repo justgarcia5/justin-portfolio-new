@@ -1,52 +1,93 @@
 import React, { useState } from 'react';
+import { send } from 'emailjs-com';
 
 import classes from './ContactForm.module.css';
 import GreenButton from '../../UI/GreenButton';
 
 const ContactForm = () => {
   const [success, setSuccess] = useState();
-  const [email, setEmail] = useState('');
-  const [name, setName] = useState('');
-  const [message, setMessage] = useState('');
+  const [toSend, setToSend] = useState({
+    fromName: '',
+    message: '',
+    replyTo: '',
+  });
+  const [formHasError, setFormHasError] = useState();
 
   const handleSubmit = e => {
     e.preventDefault();
-    setSuccess('Email sent!');
-    setEmail('');
-    setName('');
-    setMessage('');
+    let emailValid = toSend.replyTo.match(/^\S+@\S+\.\S+$/);
+
+    console.log(emailValid);
+    if(toSend.fromName.trim().length === 0 || toSend.replyTo.length === 0 || toSend.message.length === 0) {
+      setFormHasError({
+          title: 'Invalid Input',
+          message: 'Please enter a valid Name, Email and Message (cannot be blank).',
+      })
+      return;
+    } else if(!emailValid) {
+        setFormHasError({
+          title: 'Invalid Email',
+          message: 'Please enter a valid Email.',
+      })
+      return;
+    }
+
+    send(
+      process.env.REACT_APP_SERVICE_ID,
+      process.env.REACT_APP_TEMPLATE_ID,
+      toSend,
+      process.env.REACT_APP_USER_ID
+    )
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        setSuccess('Email sent');
+        setFormHasError({
+          title: '',
+          message: '',
+      })
+      })
+      .catch((err) => {
+        console.log('FAILED...', err);
+      });
+
+      setToSend({
+        fromName: '',
+        message: '',
+        replyTo: '',
+      })
 
     setTimeout(() => {
-        setSuccess('');
+      setSuccess('');
     }, 2000);
   }
 
-  const emailChangeHandler = e => setEmail(e.target.value);
-
-  const nameChangeHandler = e => setName(e.target.value);
-
-  const messageChangeHandler = e => setMessage(e.target.value);
+  const handleChange = (e) => setToSend({ ...toSend, [e.target.name]: e.target.value });
 
   return (
     <form className={classes.input} onSubmit={handleSubmit}>
       <h2>Send me a message!</h2>
-      <label >Enter email</label>
+      {formHasError && <p className={classes.alert}>{formHasError.title}</p>}
+      {formHasError && <p className={classes.alert}>{formHasError.message}</p>}
       <input
-        type="text"
-        onChange={emailChangeHandler}
-        value={email}
+        type='text'
+        name='fromName'
+        placeholder='from name'
+        value={toSend.fromName}
+        onChange={handleChange}
       />
-      <label >Enter name</label>
       <input
-        type="text"
-        onChange={nameChangeHandler}
-        value={name}
+        type='text'
+        name='replyTo'
+        placeholder='Your email'
+        value={toSend.replyTo}
+        onChange={handleChange}
       />
-      <label >Enter message</label>
       <textarea
-        type="text"
-        onChange={messageChangeHandler}
-        value={message}
+        type='text'
+        name='message'
+        placeholder='Your message'
+        value={toSend.message}
+        onChange={handleChange}
       />
       <GreenButton>
           Send
