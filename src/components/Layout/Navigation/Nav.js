@@ -6,8 +6,7 @@ import classes from './Nav.module.css';
 import logo from '../../../images/logo.png';
 import resume from '../../../files/resume.pdf'
 
-
-const Nav = props => {
+const Nav = () => {
   const [open, setOpen] = useState(false);
 
 	const scroll = (id) => {
@@ -28,7 +27,6 @@ const Nav = props => {
   return (
     <Router>
       <nav className={open ? classes['navbar-active'] : classes.navbar}>
-      {/* <nav className={classes.navbar}> */}
 				<Link to="" className={classes['nav-logo']} onClick={() => scroll('#intro')}>
 					<img src={logo} alt=''/>
 				</Link>
@@ -37,9 +35,6 @@ const Nav = props => {
 				</div>
 				<ul className={open ? classes['nav-links-active'] : classes['nav-links']}>
 					<li className={classes['nav-logo']}>
-						{/* <Link to="" className={classes['nav-link']} onClick={() => scroll('#intro')}>
-							Home
-						</Link> */}
 						<Link to={resume} className={classes['nav-link']} target="_blank" download>
 							Resume
 						</Link>

@@ -3,15 +3,16 @@ import { send } from 'emailjs-com';
 
 import classes from './ContactForm.module.css';
 import GreenButton from '../../UI/GreenButton';
+import postage from '../../../images/postage.jpeg';
 
 const ContactForm = () => {
   const [success, setSuccess] = useState();
+  const [formHasError, setFormHasError] = useState();
   const [toSend, setToSend] = useState({
     fromName: '',
     message: '',
     replyTo: '',
   });
-  const [formHasError, setFormHasError] = useState();
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -65,6 +66,7 @@ const ContactForm = () => {
 
   return (
     <form className={classes.input} onSubmit={handleSubmit}>
+      <img src={postage} alt=''/>
       <h2>Send me a message!</h2>
       {formHasError && <p className={classes.alert}>{formHasError.title}</p>}
       {formHasError && <p className={classes.alert}>{formHasError.message}</p>}
@@ -90,7 +92,7 @@ const ContactForm = () => {
         onChange={handleChange}
       />
       <GreenButton>
-          Send
+        Send
       </GreenButton>
       <p>{success}</p>
     </form>
