@@ -7,7 +7,9 @@ import postage from '../../../images/postage.jpeg';
 
 const ContactForm = () => {
   const [success, setSuccess] = useState();
-  const [formHasError, setFormHasError] = useState();
+  const [nameHasError, setNameHasError] = useState(null);
+  const [messageHasError, setMessageHasError] = useState(null);
+  const [emailHasError, setEmailHasError] = useState(null);
   const [toSend, setToSend] = useState({
     fromName: '',
     message: '',
@@ -16,22 +18,35 @@ const ContactForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-
     let emailValid = toSend.replyTo.match(/^\S+@\S+\.\S+$/);
 
-    if(toSend.fromName.trim().length === 0 || toSend.replyTo.length === 0 || toSend.message.length === 0) {
-      setFormHasError({
-          title: 'Invalid Input',
-          message: 'Please enter a valid Name, Email and Message (cannot be blank).',
-      })
+    if(toSend.fromName.trim().length === 0 && toSend.replyTo.length === 0 && toSend.message.trim().length === 0) {
+      setNameHasError(true);
+      setEmailHasError(true);
+      setMessageHasError(true);
       return;
-    } else if(!emailValid) {
-        setFormHasError({
-          title: 'Invalid Email',
-          message: 'Please enter a valid Email.',
-      })
+    } else if(toSend.replyTo.length === 0 && toSend.message.trim().length === 0) {
+      setEmailHasError(true);
+      setMessageHasError(true);
+      return;
+    } else if(toSend.fromName.trim().length === 0 && toSend.message.trim().length === 0) {
+      setNameHasError(true);
+      setMessageHasError(true);
+      return;
+    } else if(toSend.fromName.trim().length === 0) {
+      setNameHasError(true);
+      return;
+    } else if(!emailValid || toSend.replyTo.length === 0) {
+      setEmailHasError(true);
+      return;
+    } else if(toSend.message.trim().length === 0) {
+      setMessageHasError(true);
       return;
     }
+
+    setNameHasError(false);
+    setMessageHasError(false);
+    setEmailHasError(false);
 
     send(
       process.env.REACT_APP_SERVICE_ID,
@@ -42,10 +57,6 @@ const ContactForm = () => {
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
         setSuccess('Email sent');
-        setFormHasError({
-          title: '',
-          message: '',
-      })
       })
       .catch((err) => {
         console.log('FAILED...', err);
@@ -62,20 +73,34 @@ const ContactForm = () => {
     }, 2000);
   }
 
-  const handleChange = (e) => setToSend({ ...toSend, [e.target.name]: e.target.value });
+  const handleChange = (e) => {
+    if(e.target.name === 'replyTo') {
+      let validEmail = e.target.value.match(/^\S+@\S+\.\S+$/);
+      validEmail ? setEmailHasError(false) : setEmailHasError(true)
+    }
+
+    if(e.target.name === 'fromName' ) {
+      e.target.value.length === 0 ? setNameHasError(true) :setNameHasError(false);
+    }
+
+    if(e.target.name === 'message' ) {
+      e.target.value.length === 0 ? setMessageHasError(true) : setMessageHasError(false);
+    }
+
+    setToSend({ ...toSend, [e.target.name]: e.target.value });
+  }
 
   return (
     <form className={classes.input} onSubmit={handleSubmit}>
       <img src={postage} alt=''/>
       <h2>Send me a message!</h2>
-      {formHasError && <p className={classes.alert}>{formHasError.title}</p>}
-      {formHasError && <p className={classes.alert}>{formHasError.message}</p>}
       <input
         type='text'
         name='fromName'
         placeholder='Your name'
         value={toSend.fromName}
         onChange={handleChange}
+        className={nameHasError ? classes['name-alert'] : ''}
       />
       <input
         type='text'
@@ -83,6 +108,7 @@ const ContactForm = () => {
         placeholder='Your email'
         value={toSend.replyTo}
         onChange={handleChange}
+        className={emailHasError ? classes['email-alert'] : ''}
       />
       <textarea
         type='text'
@@ -90,6 +116,9 @@ const ContactForm = () => {
         placeholder='Your message'
         value={toSend.message}
         onChange={handleChange}
+        rows='5'
+        cols='33'
+        className={messageHasError ? classes['message-alert'] : ''}
       />
       <GreenButton>
         Send

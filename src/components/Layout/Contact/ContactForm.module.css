@@ -85,6 +85,18 @@ textarea:focus {
   color: rgb(161, 27, 27);
 }
 
+.email-alert {
+  background-color: rgb(255, 175, 175)!important;
+}
+
+.name-alert {
+  background-color: rgb(255, 175, 175)!important;
+}
+
+.message-alert {
+  background-color: rgb(255, 175, 175)!important;
+}
+
 @media only screen and (max-width: 900px) {
   .input {
     width: auto;
