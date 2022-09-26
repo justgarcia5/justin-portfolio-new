@@ -2,7 +2,7 @@ import React from "react";
 
 import classes from './Intro.module.css';
 import Me from '../../images/me2.jpg';
-import Background from '../../images/stars.jpeg';
+import Background from '../../images/stars.jpg';
 
 const Intro = props => {
   return (
