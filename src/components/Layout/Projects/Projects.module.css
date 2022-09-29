@@ -1,8 +1,7 @@
 .projects-section {
   position: relative;
   top: -120px;
-  background: linear-gradient(180deg, rgb(14, 15, 17), white);
-
+  /* background: linear-gradient(180deg, rgb(14, 15, 17), white); */
 }
 
 .title {
@@ -15,7 +14,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  padding: 60px 40px;
+  padding: 0px 40px;
 }
 
 .project-cards img {

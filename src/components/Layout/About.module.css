@@ -59,7 +59,7 @@ iframe {
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
-  padding: 40px 0 50px 0;
+  padding: 40px 0 200px 0;
 }
 
 .logo-section-row1 img:last-child {
